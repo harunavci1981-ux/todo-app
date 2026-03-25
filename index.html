@@ -7,8 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Auth Ekrani -->
+    <div class="container" id="auth-section">
         <h1>Yapilacaklar Listesi</h1>
+        <div id="auth-message" class="auth-message hidden"></div>
+        <form id="auth-form">
+            <input type="email" id="auth-email" placeholder="E-posta" required>
+            <input type="password" id="auth-password" placeholder="Sifre (en az 6 karakter)" minlength="6" required>
+            <button type="submit" id="auth-submit">Giris Yap</button>
+        </form>
+        <p class="auth-toggle">
+            <span id="auth-toggle-text">Hesabin yok mu?</span>
+            <a href="#" id="auth-toggle-link">Kayit Ol</a>
+        </p>
+    </div>
+
+    <!-- Todo Ekrani -->
+    <div class="container hidden" id="app-section">
+        <div class="app-header">
+            <h1>Yapilacaklar Listesi</h1>
+            <div class="user-bar">
+                <span id="user-email"></span>
+                <button id="logout-btn">Cikis</button>
+            </div>
+        </div>
         <form id="todo-form">
             <input type="text" id="todo-input" placeholder="Yeni gorev ekle..." autocomplete="off">
             <button type="submit">Ekle</button>
